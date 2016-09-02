@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hw05.group25_hw05.WeatherDetailActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/details_location_label_tview"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:minHeight="20dp"
+        android:text="@string/loc_label"
+        android:layout_alignParentTop="true"
+        android:padding="10dp" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/details_WIcon_iview"
+        android:layout_below="@+id/details_location_label_tview"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:minHeight="60dp"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/weather_icon" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/details_temp_value_tview"
+        android:layout_below="@+id/details_WIcon_iview"
+        android:layout_alignLeft="@+id/details_WIcon_iview"
+        android:layout_alignStart="@+id/details_WIcon_iview"
+        android:layout_marginTop="2dp"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/details_location_value_tview"
+        android:layout_alignTop="@+id/details_location_label_tview"
+        android:layout_toRightOf="@+id/details_location_label_tview"
+        android:layout_toEndOf="@+id/details_location_label_tview"
+        android:padding="10dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/climate_type_value"
+        android:layout_alignLeft="@+id/details_temp_value_tview"
+        android:layout_alignStart="@+id/details_temp_value_tview"
+        android:id="@+id/max_linear"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/max_temp_label"
+            android:id="@+id/details_max_temp_label"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:paddingRight="5dp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/max_temp_value"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/min_linear"
+        android:layout_below="@+id/max_linear"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/min_temp_label"
+            android:id="@+id/details_min_temp_label"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:paddingRight="5dp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/min_temp_value"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/min_linear"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:id="@+id/details_linear">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/feels_linear">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/feels_label"
+                android:id="@+id/details_feels_label"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingRight="15dp"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/feels_value"
+                android:layout_weight="1"
+                android:paddingLeft="5dp"
+                android:textStyle="bold"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/humidity_linear">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/humidity_label"
+                android:id="@+id/details_humidity_label"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingRight="15dp"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/humidity_value"
+                android:layout_weight="1"
+                android:paddingLeft="5dp"
+                android:textStyle="bold"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/dew_linear">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dew_label"
+                android:id="@+id/details_dew_label"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingRight="15dp"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dew_value"
+                android:layout_weight="1"
+                android:paddingLeft="5dp"
+                android:textStyle="bold"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/pressure_linear">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pressure_label"
+                android:id="@+id/details_pressure_label"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingRight="15dp"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/pressure_value"
+                android:layout_weight="1"
+                android:paddingLeft="5dp"
+                android:textStyle="bold"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/clouds_linear">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/clouds_label"
+                android:id="@+id/details_clouds_label"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingRight="15dp"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/clouds_value"
+                android:layout_weight="1"
+                android:paddingLeft="5dp"
+                android:textStyle="bold"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/winds_linear">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/winds_label"
+                android:id="@+id/details_winds_label"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingRight="15dp"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/winds_value"
+                android:layout_weight="1"
+                android:paddingLeft="5dp"
+                android:textStyle="bold"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp" />
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/climate_type_value"
+        android:layout_below="@+id/details_temp_value_tview"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textSize="20sp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/prev_button"
+        android:contentDescription="previous_btn"
+        android:src="@drawable/ic_previous"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/next_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_next_btn" />
+
+</RelativeLayout>

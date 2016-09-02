@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/YourOrdertxt"
+        android:id="@+id/YourOrderTextView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/abc_text_size_headline_material" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/BasePriceTextView"
+        android:id="@+id/BasePricetextView"
+        android:layout_below="@+id/YourOrderTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="44dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/ToppingsTextView"
+        android:id="@+id/ToppingstextView2"
+        android:layout_below="@+id/BasePricetextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="42dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/BasePriceEditText"
+        android:layout_alignTop="@+id/BasePricetextView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/BasePriceEditText"
+        android:textSize="@dimen/abc_text_size_large_material" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ToppingsEditText"
+        android:layout_alignTop="@+id/ToppingstextView2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/ToppingsEditText"
+        android:textSize="@dimen/abc_text_size_large_material" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sselectedToppingsTextView"
+        android:id="@+id/textView"
+        android:layout_below="@+id/ToppingsEditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/DeliveryCostTextView2"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/textView"
+        android:layout_toLeftOf="@+id/ToppingsEditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="50dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/DeliveryCostEditText"
+        android:textSize="@dimen/abc_text_size_large_material" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/TotalTextView"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="38dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText2"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignRight="@+id/ToppingsEditText"
+        android:layout_alignEnd="@+id/ToppingsEditText"
+        android:text="@string/TotalEditText"
+        android:textSize="@dimen/abc_text_size_large_material" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/FinishButton"
+        android:id="@+id/buttonfinish"
+        android:layout_below="@+id/editText2"
+        android:layout_alignRight="@+id/YourOrderTextView"
+        android:layout_alignEnd="@+id/YourOrderTextView" />
+
+</RelativeLayout>

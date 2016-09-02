@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Group25_HW05</string>
+    <string name="add_button">Add City</string>
+    <string name="clear_city">Clear Save City</string>
+    <string name="view_notes">View Notes</string>
+    <string name="title_activity_add__city">Add City</string>
+    <string name="main_label">There are no cities to display. Add using the “+” button from the menu</string>
+    <string name="climate_icon_label">climate</string>
+    <string name="weather_icon">Weather icon</string>
+    <string name="loc_label">Current Location:</string>
+    <string name="max_temp_label">Max Temperature:</string>
+    <string name="min_temp_label">Min Temperature:</string>
+    <string name="feels_label">Feels Like:</string>
+    <string name="humidity_label">Humidity:</string>
+
+    <string name="dew_label">Dewpoint:</string>
+    <string name="pressure_label">Pressure:</string>
+    <string name="clouds_label">Clouds:</string>
+    <string name="winds_label">Winds:</string>
+    <string name="loc1_label">Current Location:</string>
+    <string name="slash">/</string>
+    <string name="note_editText">Enter Note between 1 and 30 characters</string>
+    <string name="save_note">Save Note</string>
+    <string name="note_icon">note</string>
+
+
+</resources>

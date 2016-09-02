@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.inclass_03.pizzastore.MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/topping_table_id">
+
+            <TableRow
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:id="@+id/topping_row_1">
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:id="@+id/topping_row_2"></TableRow>
+
+        </TableLayout>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pizza_icon"
+            android:src="@drawable/pizza"
+            android:contentDescription="@string/pizza_icon"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delivery_check"
+            android:id="@+id/delivery_check" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/top_progress"
+            android:indeterminate="false" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:text="@string/add_topping_btn"
+                android:id="@+id/add_topping_btn"
+                android:padding="5dp"
+                android:layout_gravity="left"
+                android:gravity="center" />
+
+            <Button
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:text="@string/clear_button"
+                android:id="@+id/clear_button"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/checkout_button"
+            android:id="@+id/checkout_button" />
+
+    </LinearLayout>
+
+</RelativeLayout>

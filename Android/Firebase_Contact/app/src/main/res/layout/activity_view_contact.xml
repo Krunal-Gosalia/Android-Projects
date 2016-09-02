@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.firebase.firebase_contact.ViewContactActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/contactNameTitle_textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center_horizontal"
+        android:textSize="25sp" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/contactProfile_imageView"
+        android:layout_below="@+id/contactNameTitle_textView"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="contactProfile"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name:"
+        android:id="@+id/contactName_text"
+        android:layout_below="@+id/contactProfile_imageView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="50dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/contactName_value"
+        android:layout_alignBottom="@+id/contactName_text"
+        android:layout_alignTop="@+id/contactName_text"
+        android:layout_toRightOf="@+id/contactName_text"
+        android:layout_marginLeft="20dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/contactPhone_textView"
+        android:layout_below="@+id/contactName_text"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Phone # :"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/contactPhone_value"
+        android:layout_alignBottom="@+id/contactPhone_textView"
+        android:layout_alignTop="@+id/contactPhone_textView"
+        android:layout_toRightOf="@+id/contactPhone_textView"
+        android:layout_marginLeft="20dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email:"
+        android:id="@+id/contactEmail_textView"
+        android:layout_below="@+id/contactPhone_textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/contactEmail_value"
+        android:layout_alignTop="@+id/contactEmail_textView"
+        android:layout_toRightOf="@+id/contactEmail_textView"
+        android:layout_toEndOf="@+id/contactEmail_textView"
+        android:layout_marginLeft="20dp"
+        android:textSize="20sp" />
+</RelativeLayout>
